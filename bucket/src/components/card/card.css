@@ -1,0 +1,205 @@
+.bucket-card{
+    background-color: var(--primary-card);
+    width: 70%;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+}
+.delete-bucket{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--delete-bucket);
+    color: var(--delete-bucket-icon);
+    cursor: pointer;
+}
+.bucket-card:hover .delete-bucket{
+    display: flex;
+}
+.bucket-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.created-date{
+    font-family: interSemiBold;
+    font-size: 12px;
+    color: var(--primary-icon);
+}
+.bucket-title{
+    font-family: interExtraBold;
+    font-size: 20px;
+    flex: 4;
+    color: var(--secondary-icon);
+}
+.meter{
+    flex: 1;
+    padding: 1px;
+    font-size: 12px;
+    border: 1px solid var(--meter);
+    border-radius: 20px;
+    text-align: center;
+    font-family: interMedium;
+    position: relative;
+    overflow: hidden;
+}
+.meter-reader{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--meter);
+    z-index: 11;
+}
+.meter-value{
+    text-align: center;
+    z-index: 111;
+    color: var(--primary-icon);
+}
+.description{
+    flex: 1;
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--primary-icon);
+    font-family: interRegular;
+    font-size: 14px;
+}
+.add-task{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-task-btn{
+    padding: 5px 7px;
+    border: none;
+    margin-bottom: 10px;
+    font-family: interBold;
+    color: var(--secondary-icon);
+    background-color: var(--secondary-bg);
+    border-radius: 100px;
+    cursor: pointer;
+}
+.add-task-btn:hover{
+    background-color: var(--btn-hover);
+}
+.add-task-area{
+    margin-bottom: 15px;
+    display: flex;
+    gap: 5px;
+}
+.hide-add-task{
+    display: none;
+}
+.enter-task{
+    flex: 9;
+    background: transparent;
+    resize: none;
+    color: var(--secondary-icon);
+    font-family: interRegular;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--input-border);
+    height: 70px;
+}
+.enter-task::placeholder{
+    font-family: interBold;
+    color: var(--secondary-icon);
+}
+.add-task-action{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-family: interBold;
+    color: var(--delete-bucket-icon);
+    background-color: var(--primary-btn);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.tasks{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.task-container{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--secondary-card);
+    border-radius: 3px;
+    position: relative;
+}
+.task-container:hover{
+    background-color: var(--primary-bg);
+}
+.task{
+    font-family: interMedium;
+    font-size: 15px;
+    color: var(--secondary-icon);
+    flex: 9;
+}
+.task-finish-time{
+    margin-top: 5px;
+    font-family: interSemiBold;
+    color: var(--primary-icon);
+    font-size: 13px;
+}
+.task-done-btn{
+    flex: 1;
+    background-color: rgb(255, 155, 217);
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    cursor: pointer;
+}
+.task-done-btn:hover{
+    background-color: rgb(255, 136, 210);
+}
+.remove-btn{
+    position: absolute;
+    right: -10px;
+    top: -12px;
+    width: 23px;
+    height: 23px;
+    border-radius: 100px;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--delete-bucket);
+    padding: 2px;
+    cursor: pointer;
+    color: var(--delete-bucket-icon);
+}
+.task-container:hover .remove-btn{
+    display: flex;
+}
+
+@media (max-width:500px){
+    .bucket-card{
+        width: 100%;
+    }
+    .bucket-card:last-child{
+        margin-bottom: 70px;
+    }
+    .meter{
+        flex: 2;
+    }
+}

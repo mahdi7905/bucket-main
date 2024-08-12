@@ -1,0 +1,144 @@
+.new-task-page{
+    width: 100%;
+    padding: 20px;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-task-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--primary-card);
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    width: 300px;
+}
+.form-header{
+    font-family:interBold ;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--secondary-icon);
+}
+.form-bucket-title, .form-description,.form-step {
+    flex: 1;
+    background: transparent;
+    resize: none;
+    color: var(--secondary-icon);
+    font-family: interRegular;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--input-border);
+    height: 70px;
+}
+.form-bucket-title::placeholder, 
+.form-description::placeholder,
+.form-step::placeholder {
+    color: var(--secondary-icon);
+}
+.form-description,
+.form-step{
+    height: 50px;
+}
+.form-to-be-done{
+    display: flex;
+    flex-direction: column;
+}
+.form-to-be-done label{
+    font-family: interBold;
+    color: var(--secondary-icon);
+    margin-bottom: 5px;
+}
+.form-to-be-done input{
+    flex: 1;
+    background: var(--secondary-bg);
+    resize: none;
+    color: var(--secondary-icon);
+    font-family: interRegular;
+    padding: 7px;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    height: 70px;
+}
+.form-steps{
+    font-family: interSemiBold;
+    margin-top: 10px;
+    color: var(--secondary-icon);
+}
+
+.form-add-step-btn,.form-create-btn {
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    font-family: interBold;
+    color: var(--secondary-icon);
+    background-color: var(--secondary-bg);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-create-btn{
+    margin-top: 10px;
+}
+
+.form-add-step-btn:hover,.form-create-btn:hover {
+    background-color: var(--btn-hover);
+}
+.form-add-step-btn:hover .qeue-icon {
+    animation: add-icon .5s linear infinite;
+}
+.form-create-btn:hover .create-icon{
+    animation: create-icon 1s linear infinite;
+}
+@keyframes create-icon {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-3px);
+    }
+}
+@keyframes add-icon {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+.form-step-area{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.form-step{
+    flex: 10;
+}
+.form-step-rm-btn{
+    flex: 1;
+    background:transparent ;
+    border: none;
+    color: var(--bin);
+    cursor: pointer;
+}
+.form-step-rm-btn:hover{
+    transform: scale(1.05);
+    color: crimson;
+}
+@media (max-width:500px){
+    .new-task-page {
+        height: calc(100vh - 140px);
+    }
+    .new-task-form {
+        width: 90%;
+    }
+}

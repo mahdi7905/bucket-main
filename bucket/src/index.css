@@ -1,0 +1,67 @@
+@font-face {
+  font-family: interRegular;
+  src: url('./fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: interMedium;
+  src: url('./fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+  font-family: interSemiBold;
+  src: url('./fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: interBold;
+  src: url('./fonts/Inter-Bold.ttf');
+}
+
+@font-face {
+  font-family: interExtraBold;
+  src: url('./fonts/Inter-ExtraBold.ttf');
+}
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --primary-bg:rgb(255, 215, 236);
+  --primary-gr:rgb(255, 197, 227);
+  --secondary-bg:rgb(255, 121, 190);
+  --primary-icon:rgb(118, 55, 88);
+  --secondary-icon:rgb(85, 40, 63);
+  --primary-card:rgb(255, 201, 230);
+  --secondary-card:rgb(255, 188, 224);
+  --primary-btn: rgb(255, 121, 190);
+  --btn-hover:rgb(255, 155, 217);
+  --meter:rgba(255, 121, 190, .5);
+  --delete-bucket:rgb(255, 121, 190);
+  --delete-bucket-icon:rgb(85, 40, 63);
+  --bin:rgb(255, 121, 190);
+  --input-border: rgb(255, 121, 190);
+
+}
+[data-theme='dark'] {
+  --primary-bg: rgb(72, 26, 52);
+  --secondary-bg: rgb(93, 34, 67);
+  --primary-icon: rgb(255, 215, 236);
+  --secondary-icon: rgb(255, 121, 190);
+  --primary-card: rgb(84, 30, 61);
+  --secondary-card: rgb(101, 38, 74);
+  --meter: rgba(255, 121, 190,.5);
+  --btn-hover: rgb(107, 39, 78);
+  --input-border: rgb(119, 44, 86);
+}
+
+
+
+body{
+  background: var(--primary-bg);
+}
+body::-webkit-scrollbar{
+  display: none;
+}

@@ -1,0 +1,42 @@
+.tablinks{
+    width: 100%;
+    height: 70px;
+    z-index: 111111;
+    background-color: var(--secondary-bg);
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
+
+.tablinks ul {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    list-style-type: none;
+}
+
+.tablinks ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--primary-icon);
+    transition: all .1s ease;
+    font-family: interMedium;
+    font-size: 14px;
+}
+
+.tablinks ul li a.active {
+    color: var(--secondary-icon);
+    font-family: interBold;
+}
+
+@media (max-width:500px){
+    .tablinks{
+        display: flex;
+        align-items: center;
+    }
+}

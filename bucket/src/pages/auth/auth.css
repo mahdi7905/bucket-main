@@ -1,0 +1,108 @@
+.auth-page{
+    flex: 1;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth-card {
+    background-color: var(--primary-card);
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.auth-header{
+    font-family: interBold;
+    font-size: 1.5rem;
+    color: var(--secondary-icon);
+}
+.form-error{
+    color: crimson;
+    align-self: flex-start;
+    margin-bottom: -5px;
+    font-family: interSemiBold;
+    font-size: 14px;
+}
+.auth-input-wrapper{
+    display: flex;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    background: rgba(255, 121, 190, 0.1);
+    padding-left: 10px;
+    color: var(--primary-btn);
+    border-bottom: 2px solid var(--input-border);
+}
+.auth-input{
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    background: transparent;
+    color: var(--secondary-icon);
+    outline: none;
+    border: none;
+}
+.auth-input::placeholder{
+    color: var(--primary-icon);
+}
+.auth-btn{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: var(--input-border);
+    color: var(--secondary-icon);
+    font-family: interBold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .05s ease;
+}
+.auth-btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--input-border);
+    color: var(--primary-btn);
+    
+}
+.auth-btn:hover .login-icon{
+    animation: login-btn .5s linear infinite;
+}
+
+.auth-toggle{
+    font-family: interMedium;
+    font-size: .8rem;
+    color: var(--secondary-icon);
+}
+.auth-toggle span{
+    background-color: var(--input-border);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: interSemiBold;
+    padding: 5px;
+    margin-left: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.auth-toggle span:hover{
+    background-color: var(--primary-bg);
+}
+
+@keyframes login-btn {
+    from {
+            transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX(5px);
+    }
+}
